@@ -1,11 +1,15 @@
 class BubbleTea:
     """The base bubble tea class."""
 
-    def __init__(self, sort):
-        self.sort = sort
-        
+    def __init__(self, *a, **kw):
+        self.a = a
+        self.kw = kw
+
+    def __repr__(self):
+        return f'<BubbleTea sort={self.kw.get("sort")} price={self.kw.get("price")}>'
+
     def __str__(self):
-        return self.sort
+        return self.kw.get('sort')
 
 
 class MilkTea(BubbleTea):
@@ -14,8 +18,7 @@ class MilkTea(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('MilkTea')
-        self.price = 2.75
+        super().__init__(sort='MilkTea', price=2.75)
 
 
 class FruitTea(BubbleTea):
@@ -25,9 +28,7 @@ class FruitTea(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('FruitTea')
-
-        self.price = 2.50
+        super().__init__(sort='FruitTea', price=2.50)
 
 
 class Milkshake(BubbleTea):
@@ -36,9 +37,7 @@ class Milkshake(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('Milkshake')
-
-        self.price = 3.00
+        super().__init__(sort='Milkshake', price=3.00)
 
 
 class FreshMilk(BubbleTea):
@@ -48,9 +47,7 @@ class FreshMilk(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('FreshMilk')
-
-        self.price = 1.00
+        super().__init__(sort='FreshMilk', price=1.00)
 
 
 class SaltedCream(BubbleTea):
@@ -60,9 +57,7 @@ class SaltedCream(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('SaltedCream')
-
-        self.price = 1.00
+        super().__init__(sort='SaltedCream', price=1.00)
 
 
 class BlackTea(BubbleTea):
@@ -73,9 +68,7 @@ class BlackTea(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('BlackTea')
-
-        self.price = 2.00
+        super().__init__(sort='BlackTea', price=2.00)
 
 
 class ThaiTea(BubbleTea):
@@ -85,15 +78,11 @@ class ThaiTea(BubbleTea):
     """
 
     def __init__(self):
-        super().__init__('ThaiTea')
-
-        self.price = 2.00
+        super().__init__(sort='ThaiTea', price=2.00)
 
 
 class TaroBubbleTea(BubbleTea):
     """Incorporates puréed taro, a purple root similar to sweet potato that has a toasty, sweet flavor."""
 
     def __init__(self):
-        super().__init__('TaroBubbleTea')
-
-        self.price = 2.00
+        super().__init__(sort='TaroBubbleTea', price=2.00)

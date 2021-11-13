@@ -1,6 +1,3 @@
-from sorts import BubbleTea
-
-
 class Inventory:
     """A class storing all items."""
     

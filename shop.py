@@ -1,5 +1,5 @@
 from sales import Sales
-from sorts import BubbleTea
+from sorts import *
 from inventory import Inventory
 from cash_register import CashRegister
 from employee import Employee
@@ -38,4 +38,4 @@ class BubbleTeaShop(Sales, Inventory, CashRegister):
 
     async def work(self):
         while self._break is False:
-            ...
+            task = ...
