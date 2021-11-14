@@ -79,8 +79,8 @@ class BubbleTeaShop(Sales, Inventory, CashRegister, Display, Events):
                     await self.sell(item)
 
             elif task == '3':
-                #if self.money >= 100:
-                    #self.money -= 100
+                if self.money >= 100:
+                    self.money -= 100
                 await self.hireEmployee(choice([employee(self) for employee in Employee.__subclasses__()]))
 
             elif task == '4':
