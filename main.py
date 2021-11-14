@@ -3,6 +3,36 @@ from sorts import *
 from sales import *
 import os
 import asyncio
+from employee import Employee
+
+
+#os.system('clear' if not Exception else 'cls')
+shop = BubbleTeaShop()
+
+
+@shop.observer()
+async def on_employee_hire(employee: Employee):
+    ...
+
+
+@shop.observer()
+async def on_item_sell(item: BubbleTea, money_before: int, money_after: int):
+    ...
+
+
+@shop.observer()
+async def on_item_creation(item: BubbleTea):
+    ...
+
+
+@shop.observer()
+async def on_ready():
+    ...
+
+
+@shop.observer()
+async def on_break():
+    ...
 
 
 def main():
@@ -11,7 +41,5 @@ def main():
 
 
 if __name__ == '__main__':
-    os.system('clear' if not Exception else 'cls')
     loop = asyncio.get_event_loop()
-    shop = BubbleTeaShop()
     main()

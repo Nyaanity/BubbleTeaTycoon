@@ -3,4 +3,5 @@ class Sales:
 
     def __init__(self):
         """Initialize."""
+        super().__init__()
         self.sales = []

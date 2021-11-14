@@ -2,14 +2,14 @@ class BubbleTea:
     """The base bubble tea class."""
 
     def __init__(self, *a, **kw):
-        self.a = a
-        self.kw = kw
+        self.sort = kw.get('sort')
+        self.price = kw.get('price')
 
     def __repr__(self):
-        return f'<BubbleTea sort={self.kw.get("sort")} price={self.kw.get("price")}>'
+        return f'<BubbleTea sort={self.sort} price={self.price}>'
 
     def __str__(self):
-        return self.kw.get('sort')
+        return self.sort
 
 
 class MilkTea(BubbleTea):
