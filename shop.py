@@ -98,6 +98,6 @@ class BubbleTeaShop(Sales, Inventory, CashRegister, Display, Events):
                 os.system(__file__)
 
             elif task == '7':
-                exit(code=0)
+                self._break = True
 
         await self.dispatch('break')
