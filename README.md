@@ -1,7 +1,7 @@
 # BubbleTeaTycoon
 
-A simple tycoon made in Python. NOT finished.
+A simple classic asynchronous tycoon made in Python.
 
 > "Why?"
 
-- Because I have nothing else to do..
+- Because I have nothing better to do :>
