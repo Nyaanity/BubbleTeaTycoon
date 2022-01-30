@@ -1,3 +1,3 @@
 # BubbleTeaTycoon
 
-A simple classic asynchronous tycoon made in Python.
+A simple classic async tycoon made in Python.
